@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>I have something to tell you</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<canvas id="fx" aria-hidden="true"></canvas>
+<main>
+  <section class="stage hide" id="s0">
+    <h1>Hi there 👋</h1>
+    <p class="txt" style="min-height:0">Before we start, what's your name?</p>
+    <input id="nm" placeholder="Type your name" autocomplete="given-name" maxlength="40">
+    <button class="next" id="go">Continue</button>
+  </section>
+
+  <section class="stage" id="s1">
+    <h1 id="t1"></h1>
+    <p class="txt cur" id="tx"></p>
+    <button class="next" id="nx">Tap to continue</button>
+    <div class="dots" id="dots"></div>
+  </section>
+
+  <section class="stage hide" id="s2">
+    <h1>So here's my question…</h1>
+    <p class="txt" style="min-height:0">I've never been this nervous, and I've never meant anything more.</p>
+    <h1 style="min-height:0;margin-bottom:6px">Will you be my girlfriend?</h1>
+    <div class="btns"><button id="yes">Yes 💖</button><button id="no">No</button></div>
+    <p class="note" id="note" aria-live="polite"></p>
+  </section>
+
+  <section class="stage hide" id="s3" aria-live="polite">
+    <h1>You said yes! 💖</h1>
+    <div class="card"><b id="thx">You just made my whole year.</b>Pick the place and the time. I'll bring the smile.</div>
+    <p id="wa"></p>
+  </section>
+</main>
+
+<script src="store.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
